@@ -15,10 +15,12 @@ export function normal(message, args) {
 }
 
 export const slash = {
+  name: data.name,
+  description: data.description,
   data: new SlashCommandBuilder()
     .setName(data.name)
     .setDescription(data.description),
-  exexute(interaction) {
-    interaction.reply(`Pong! ${Math.abs(interaction.client.ws.ping)}MS`);
+  execute(interaction) {
+    interaction.reply({content: `Pong! ${Math.abs(interaction.client.ws.ping)}MS`, ephemeral: true});
   },
 };
