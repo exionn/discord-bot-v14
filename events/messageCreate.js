@@ -11,7 +11,7 @@ export default (client) => {
     if (!command) return;
 
     try {
-      command.execute(message, args);
+      command(message, args);
     } catch (err) {
       console.log(err);
     }

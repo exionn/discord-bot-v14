@@ -13,7 +13,7 @@ const client = new Client({
 
 //Collections
 client.normalCommands = new Collection();
-// client.slashCommands = new Collection();
+client.slashCommands = new Collection();
 
 //Loaders
 readdirSync("./events").forEach(async (file) => {
@@ -26,11 +26,14 @@ readdirSync("./commands").forEach(async (file) => {
   if (command.normal) {
     client.normalCommands.set(command.data.name, command.normal);
   }
-  /*
-    if(command.slash) {
-        client.slashCommands.set(command.data.name, command.slash);
-    }
-    */
+
+  if (command.slash) {
+    client.slashCommands.set(command.data.name, command.slashCommands)
+
+
+
+
+  }
 });
 
 client.login(process.env.token);
