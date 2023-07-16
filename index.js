@@ -28,11 +28,7 @@ readdirSync("./commands").forEach(async (file) => {
   }
 
   if (command.slash) {
-    client.slashCommands.set(command.data.name, command.slashCommands)
-
-
-
-
+    client.slashCommands.set(command.data.name, command.slashCommands);
   }
 });
 
