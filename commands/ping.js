@@ -4,9 +4,7 @@ export const data = {
   name: "ping",
   description: "Discord'un ve botun gecikme süresi atar.",
   aliases: [],
-
   perms: [],
-  type: 1,
   cooldown: 0,
 };
 
